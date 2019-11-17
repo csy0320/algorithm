@@ -1,6 +1,8 @@
 package cn.jjdcn.leecode;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,11 +25,11 @@ public class TowSum {
 
 	public static void main(String[] args) {
 		int[] nums = {2, 7, 11, 15};
-		int target = 26;
-		System.out.println("result = " + twoSum(nums, target));
+		int target = 9;
+		System.out.println("result = " + arrayToList(twoSum(nums, target)));
 	}
 
-	public static int[] twoSum(int[] nums, int target) {
+	private static int[] twoSum(int[] nums, int target) {
 		Map<Integer, Integer> map = new HashMap<>();
 		for (int i = 0; i < nums.length; i++) {
 			int comp = target - nums[i];
@@ -38,5 +40,14 @@ public class TowSum {
 		}
 		throw new IllegalArgumentException("No two sum solution");
 
+	}
+
+	private static List arrayToList(int []array){
+
+		List<Integer> list = new ArrayList<>();
+		for (int a : array) {
+			list.add(a);
+		}
+		return list;
 	}
 }
