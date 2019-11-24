@@ -1,4 +1,4 @@
-package cn.jjdcn.leecode;
+package cn.jjdcn.leecode.subject0001;
 
 import java.util.ArrayList;
 import java.util.HashMap;
